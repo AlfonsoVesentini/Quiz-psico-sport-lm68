@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Quiz – Farmacologia dello Sport</title>
+<title>Quiz – Farmaci e Sport</title>
 <style>
   :root {
     --bg: #0b0f14;
@@ -190,7 +190,7 @@
 <body>
 <header>
   <div class="wrap">
-    <h1>Quiz – Farmacologia dello Sport</h1>
+    <h1>Quiz – Farmaci e Sport</h1>
     <p class="sub">
       Rispondi a tutte le domande nella stessa pagina. Premi <b>Invio</b> (o “Calcola risultato”) per vedere punteggio e statistiche finali.
     </p>
@@ -219,326 +219,1063 @@
 
 <script>
 const QUIZ = [
- {
-   id: 1,
-   q: "La percentuale del dispendio calorico quotidiano determinata dalla termogenesi indotta è pari a:",
-   options: ["5%", "10%", "20%", "35%"],
-   correct: 1
- },
- {
-   id: 2,
-   q: "Quale tra le seguenti classi di farmaci è vietata solo in alcune discipline sportive?",
-   options: ["Beta-bloccanti", "Oppioidi", "Corticosteroidi", "Diuretici"],
-   correct: 0
- },
- {
-   id: 3,
-   q: "Per azione topica di un farmaco si intende:",
-   options: [
-     "La comparsa di effetti prevalentemente nel punto di somministrazione del farmaco",
-     "La comparsa di effetti esclusivamente a livello del sistema nervoso centrale",
-     "La distribuzione uniforme del farmaco in tutti i tessuti",
-     "La comparsa di effetti solo dopo metabolismo epatico"
-   ],
-   correct: 0
- },
- {
-   id: 4,
-   q: "I comitati etici devono:",
-   options: [
-     "Promuovere la ricerca scientifica e tutelare i soggetti che partecipano alle sperimentazioni",
-     "Autorizzare automaticamente tutte le sperimentazioni cliniche",
-     "Valutare solo il costo economico di uno studio",
-     "Occuparsi esclusivamente della pubblicazione dei risultati"
-   ],
-   correct: 0
- },
- {
-   id: 5,
-   q: "Il consenso informativo è fondamentale:",
-   options: [
-     "Solo dal punto di vista amministrativo",
-     "Solo per gli studi osservazionali",
-     "Dal punto di vista legale ed etico",
-     "Solo nei farmaci senza prescrizione"
-   ],
-   correct: 2
- },
- {
-   id: 6,
-   q: "La legge 14 dicembre 2000 n. 376 disciplina in Italia:",
-   options: [
-     "Solo la vendita dei farmaci da banco",
-     "La tutela sanitaria dell’attività sportiva e la lotta contro il doping",
-     "Esclusivamente i brevetti farmaceutici",
-     "La sola prescrizione degli integratori"
-   ],
-   correct: 1
- },
- {
-   id: 7,
-   q: "Uno dei seguenti è un segno di disidratazione:",
-   options: ["Bradicardia", "Crampi muscolari", "Iperglicemia", "Miosi"],
-   correct: 1
- },
- {
-   id: 8,
-   q: "Il razionale per cui l’ormone della crescita viene utilizzato come doping nello sport è:",
-   options: [
-     "Ridurre la frequenza cardiaca a riposo",
-     "Stimolare la sintesi proteica con aumento della massa magra",
-     "Aumentare direttamente la ventilazione polmonare",
-     "Bloccare la secrezione di testosterone"
-   ],
-   correct: 1
- },
- {
-   id: 9,
-   q: "Una definizione di farmaco secondo l’Organizzazione Mondiale della Sanità è:",
-   options: [
-     "Qualunque sostanza usata allo scopo di modificare o studiare le funzioni fisiologiche o gli stati fisiologici a beneficio di chi la riceve",
-     "Qualunque sostanza naturale priva di effetti collaterali",
-     "Solo una sostanza iniettabile con effetto sistemico",
-     "Un prodotto utilizzabile esclusivamente in ambito ospedaliero"
-   ],
-   correct: 0
- },
- {
-   id: 10,
-   q: "La farmacocinetica differisce dalla farmacodinamica perché:",
-   options: [
-     "La prima studia i recettori, la seconda la biodisponibilità",
-     "La prima studia il destino dei farmaci nell’organismo, la seconda i meccanismi d’azione",
-     "Sono due termini equivalenti",
-     "La farmacocinetica riguarda solo i farmaci endovenosi"
-   ],
-   correct: 1
- },
- {
-   id: 11,
-   q: "L’assorbimento di un farmaco è:",
-   options: [
-     "Il legame del farmaco ai recettori",
-     "Il passaggio del farmaco dalla sede di applicazione al sangue",
-     "La trasformazione del farmaco in metaboliti inattivi",
-     "La sua eliminazione attraverso il rene"
-   ],
-   correct: 1
- },
- {
-   id: 12,
-   q: "La velocità di assorbimento del farmaco è influenzata da:",
-   options: ["Via di somministrazione", "Solo il colore del farmaco", "Solo il nome commerciale", "Esclusivamente il prezzo"],
-   correct: 0
- },
- {
-   id: 13,
-   q: "Uno dei seguenti fattori influenza la distribuzione del farmaco nell’organismo:",
-   options: [
-     "Solo il gusto del farmaco",
-     "Solo l’età del medico prescrittore",
-     "Caratteristiche chimico-fisiche, vascolarizzazione e legame alle proteine plasmatiche",
-     "Esclusivamente il numero di compresse assunte in passato"
-   ],
-   correct: 2
- },
- {
-   id: 14,
-   q: "Un valido motivo per scegliere la somministrazione rettale invece di quella orale è:",
-   options: [
-     "Maggiore precisione rispetto alla via endovenosa in ogni caso",
-     "Problemi di vomito o necessità di evitare in parte il filtro epatico",
-     "Assorbimento sempre più rapido della via inalatoria",
-     "Assenza totale di variabilità farmacocinetica"
-   ],
-   correct: 1
- },
- {
-   id: 15,
-   q: "Il tempo di latenza di un farmaco è:",
-   options: [
-     "Il tempo necessario perché compaiano i primi effetti",
-     "Il tempo necessario per eliminare il 100% del farmaco",
-     "Il tempo di permanenza del farmaco in farmacia",
-     "Il tempo che intercorre tra due prescrizioni"
-   ],
-   correct: 0
- },
- {
-   id: 16,
-   q: "Per azione sistemica di un farmaco si intende:",
-   options: [
-     "La comparsa di effetti in qualunque punto dell’organismo, sia vicino sia lontano dal punto di somministrazione",
-     "La comparsa di effetti esclusivamente nel punto di somministrazione",
-     "L’effetto limitato alla cute",
-     "L’assenza completa di effetti collaterali"
-   ],
-   correct: 0
- },
- {
-   id: 17,
-   q: "Uno dei pochi principi attivi che agisce senza interagire con uno specifico recettore è:",
-   options: ["Mannitolo", "Morfina", "Naloxone", "Adrenalina"],
-   correct: 0
- },
- {
-   id: 18,
-   q: "Uno dei seguenti è un mediatore chimico dell’infiammazione:",
-   options: ["Istamina", "Insulina", "Melatonina", "Creatina"],
-   correct: 0
- },
- {
-   id: 19,
-   q: "Una patologia di tipo emorragico aumenta il rischio di sanguinamento se il paziente assume:",
-   options: ["Aspirina", "Paracetamolo", "Amoxicillina", "Loratadina"],
-   correct: 0
- },
- {
-   id: 20,
-   q: "Le prostaglandine sono sintetizzate nel nostro organismo a partire da:",
-   options: ["Acido arachidonico", "Colesterolo", "Acido lattico", "Glucosio"],
-   correct: 0
- },
- {
-   id: 21,
-   q: "Una sostanza che può provocare dipendenza è:",
-   options: ["Alcol (etanolo)", "Vitamina C", "Acido folico", "Sodio cloruro"],
-   correct: 0
- },
- {
-   id: 22,
-   q: "Il fenomeno della tolleranza è:",
-   options: [
-     "La necessità di aumentare la dose di una sostanza per ottenere l’effetto desiderato",
-     "L’eliminazione completa della dipendenza",
-     "La comparsa di un’allergia immediata",
-     "La riduzione della biodisponibilità dovuta al freddo"
-   ],
-   correct: 0
- },
- {
-   id: 23,
-   q: "Tra i FANS, quello considerato con il minor grado di tossicità gastrointestinale è:",
-   options: ["Ketorolac", "Ibuprofene", "Nimesulide", "Indometacina"],
-   correct: 1
- },
- {
-   id: 24,
-   q: "La via neuroanatomica sottostante alla tossicodipendenza è detta:",
-   options: ["Via del piacere", "Via corticospinale", "Via piramidale", "Via ottica"],
-   correct: 0
- },
- {
-   id: 25,
-   q: "Con il termine oppiacei si indicano:",
-   options: ["Derivati dell’oppio", "Tutti gli antinfiammatori", "Solo i cannabinoidi", "Tutte le sostanze stimolanti"],
-   correct: 0
- },
- {
-   id: 26,
-   q: "Le endorfine sono sintetizzate nel nostro organismo a partire da:",
-   options: [
-     "Proopiomelanocorticotropina",
-     "Acido arachidonico",
-     "Noradrenalina",
-     "Albumina"
-   ],
-   correct: 0
- },
- {
-   id: 27,
-   q: "Il composto cocainico ritenuto con il maggior potenziale di dipendenza è:",
-   options: ["Cocaina cloridrato", "Crack", "Caffeina", "Hashish"],
-   correct: 1
- },
- {
-   id: 28,
-   q: "Una sostanza stimolante non inserita nella lista delle sostanze dopanti WADA è:",
-   options: ["Amfetamina", "Efedrina", "Caffeina", "Clenbuterolo"],
-   correct: 2
- },
- {
-   id: 29,
-   q: "Il tetraidrocannabinolo è presente in misura maggiore in:",
-   options: ["Hashish", "Tabacco", "Morfina", "Eritropoietina"],
-   correct: 0
- },
- {
-   id: 30,
-   q: "I farmaci adatti alla tosse secca sono:",
-   options: ["Espettoranti", "Sedativi della tosse", "Mucolitici ad azione locale obbligatoria", "Diuretici"],
-   correct: 1
- },
- {
-   id: 31,
-   q: "Una sostanza che non ha recettori in grado di mediare direttamente la sintesi proteica è:",
-   options: ["Adrenalina", "Testosterone", "GH", "IGF-1"],
-   correct: 0
- },
- {
-   id: 32,
-   q: "Uno dei seguenti steroidi non è un ormone:",
-   options: ["Colesterolo", "Testosterone", "Cortisolo", "Estradiolo"],
-   correct: 0
- },
- {
-   id: 33,
-   q: "In quale dei seguenti sport è vietato l’uso dei beta-bloccanti?",
-   options: ["Tiro con l’arco", "Calcio", "Nuoto", "Ciclismo"],
-   correct: 0
- },
- {
-   id: 34,
-   q: "La principale sede di sintesi dell’EPO è:",
-   options: ["Fegato", "Pancreas", "Rene", "Milza"],
-   correct: 2
- },
- {
-   id: 35,
-   q: "Uno steroide precursore metabolico del testosterone è:",
-   options: ["Deidroepiandrosterone", "Insulina", "Istamina", "Naloxone"],
-   correct: 0
- },
- {
-   id: 36,
-   q: "Una caratteristica della via di somministrazione endovenosa è:",
-   options: [
-     "Permette un accurato controllo della dose",
-     "Ha sempre assorbimento più lento della via orale",
-     "Evita ogni effetto collaterale",
-     "È adatta solo ai farmaci liposolubili"
-   ],
-   correct: 0
- },
- {
-   id: 37,
-   q: "Una sede principale di metabolizzazione dei farmaci è:",
-   options: ["Fegato", "Cute", "Midollo osseo", "Cartilagine"],
-   correct: 0
- },
- {
-   id: 38,
-   q: "Una patologia che può modificare sostanzialmente l’emivita dei farmaci è:",
-   options: ["Insufficienza renale", "Miopia", "Dermatite da contatto", "Rinite allergica stagionale"],
-   correct: 0
- },
- {
-   id: 39,
-   q: "Tra i seguenti farmaci, quello senza proprietà antinfiammatorie è:",
-   options: ["Ibuprofene", "Diclofenac", "Paracetamolo", "Ketorolac"],
-   correct: 2
- },
- {
-   id: 40,
-   q: "Il naloxone è:",
-   options: [
-     "Un oppioide agonista",
-     "Una sostanza utile nel trattamento acuto della depressione respiratoria da oppiacei",
-     "Un FANS selettivo COX-2",
-     "Un beta2-agonista inalatorio"
-   ],
-   correct: 1
- }
+  {
+    "id": 1,
+    "q": "Rispe(o al doping autologo quello omologo ha il vantaggio di:",
+    "options": [
+      "aumentare la performance durante le gare",
+      "essere una pra;ca meno individuabile nei test an;doping",
+      "diminuire il rischio di contrarre infezioni o epa;;",
+      "non alterare la performance spor;va durante l'allenamento",
+      "u;lizzare minori quan;tà di sangue"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 2,
+    "q": "Indicare l'evento avverso che sinergizza tra FANS e an;coagulan;",
+    "options": [
+      "emicrania",
+      "epatotossicità",
+      "emorragia gastrointes;nale",
+      "reazioni allergiche",
+      "blocco renale"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "q": "Quale tra i seguen; è il medicinale di autoprescrizione maggiormente u;lizzato in italia?",
+    "options": [
+      "paracetamolo",
+      "ibuprofene",
+      "fluconazolo",
+      "nafazolina",
+      "amoxicillina"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 4,
+    "q": "Quali sono i dosaggi di testosterone u;lizza; a scopi dopan;:",
+    "options": [
+      "un centesimo di quelli per la terapia di sos;tuzione ormonale",
+      "uguali a quelli per la terapia di sos;tuzione ormonale",
+      "non si usa testosterone a scopi dopan;",
+      "un decimo di quelli per la terapia di sos;tuzione ormonale",
+      "decine di volte superiori a quelli per la terapia di sos;tuzione ormonale"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 5,
+    "q": "Quale categoria di prodoN salu;s;ci è, in base ai da; del 2018 della Commissione Vigilanza Doping, maggiormente u;lizzata dagli atle; italiani?:",
+    "options": [
+      "prodoN erboris;ci",
+      "sali minerali",
+      "vitamine",
+      "integratori",
+      "vitamine"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 6,
+    "q": "Fitofarmaci:",
+    "options": [
+      "potrebbero indurre eﬀeN ina(esi e anche intossicazioni sopra(u(o in par;colari classi di popolazione",
+      "si conosce con certezza il contenuto delle preparazioni in termini di principi aNvi e di dosaggi",
+      "sono prodoN naturali e di conseguenza non sono pericolosi per la salute",
+      "poiché sono prodoN naturali, non esiste un sistema di monitoraggio della sicurezza di ques; prodoN",
+      "non alterano le prestazioni spor;ve"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 7,
+    "q": "Velocità di assorbimento:",
+    "options": [
+      "anche per la via orale, il PH dell'ambiente non è importante",
+      "la liposolubilità di un farmaco non influenza la velocità di assorbimento",
+      "la forma farmaceu;ca non influenza la velocità di assorbimento",
+      "la via di somministrazione non influenza la velocità di assorbimento",
+      "tu(e le preceden; sono false"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 8,
+    "q": "Il razionale in base al quale l'ormone della crescita viene u;lizzato come doping nello sport è:",
+    "options": [
+      "causa ipersudorazione u;le negli sport in cui la riduzione del peso è importante",
+      "aumento della massa grassa",
+      "la sua secrezione naturale è inibita dall'esercizio fisico e quindi basta allenarsi per nascondere l'assunzione di ormone",
+      "contrasta gli eﬀeN visibili degli steroidi anabolizzan;",
+      "s;molazione della sintesi proteica con aumento della massa magra"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 9,
+    "q": "L'eritropoie;na viene prodo(a prevalentemente dalle:",
+    "options": [
+      "cellule epa;che",
+      "cellule gonadiche",
+      "cellule del midollo osseo",
+      "ipofisi",
+      "cellule peritubulari renali"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 10,
+    "q": "Una delle seguen; cara(eris;che è ;pica del paracetamolo:",
+    "options": [
+      "a dosi tossiche causa la comparsa di acidosi respiratoria e metabolica",
+      "è un analgesico che da assuefazione",
+      "è un farmaco ad emivita molto lunga",
+      "può causare agranulocitosi ed anemia aplas;ca",
+      "a dosi tossiche può provocare epatotossicità"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 11,
+    "q": "Quale tra le seguen; classi di farmaci è vietata solo in alcune discipline spor;ve?",
+    "options": [
+      "benzodiazepine",
+      "oppioidi",
+      "amfetamine",
+      "glucocor;coidi",
+      "beta-bloccan;"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 12,
+    "q": "Una delle seguen; è la definizione di emivita (T 1/2) di un farmaco, indicare quale:",
+    "options": [
+      "il tempo necessario aﬃnchè la concentrazione plasma;ca del farmaco si riduca della metà",
+      "il tempo per eliminare il farmaco dall'organismo",
+      "il tempo necessario perché compaia l'eﬀe(o terapeu;co"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 13,
+    "q": "Regime di dispensazione di un farmaco:",
+    "options": [
+      "con rice(a medica ripe;bile",
+      "tu(e le preceden;",
+      "senza obbligo di prescrizione",
+      "farmaci ospedalieri prodoN da banco",
+      "con rice(a medica non ripe;bile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "q": "Il consenso informato:",
+    "options": [
+      "è necessario solo per gli adul;",
+      "non deve dichiarare eventuali rischi per il sogge(o",
+      "non riguarda le situazioni di emergenza",
+      "è fondamentale dal punto di vista legale ed e;co",
+      "per i bambini non è necessario"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 15,
+    "q": "Integratori alimentari:",
+    "options": [
+      "non sono commercializzate in forme predosate",
+      "l'u;lizzo di integratori può sos;tuire un adeguato programma di allenamento",
+      "il mercato italiano degli integratori è il più basso tra i paesi europei",
+      "sono una fonte concentrata di sostanze nutri;ve des;nate ad integrare la comune dieta",
+      "l'u;lizzo e la commercializzazione non sono regolamentate dall'UE"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 16,
+    "q": "Per azione sistemica di un farmaco si intende:",
+    "options": [
+      "la comparsa di eﬀeN in qualunque punto dell'organismo, sia vicino sia lontano dal punto di applicazione",
+      "la comparsa di eﬀeN solo nel punto di somministrazione",
+      "la comparsa di eﬀeN a carico di tuN gli organi del paziente",
+      "la comparsa di eﬀeN a carico del SNC"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 17,
+    "q": "La farmacocine;ca studia:",
+    "options": [
+      "l'impiego dei farmaci nella prevenzione e tra(amento delle patologie",
+      "nessuna delle preceden;",
+      "i meccanismi e i tra(amen; degli avvelenamen; ad opera di veleni o farmaci",
+      "il movimento dei farmaci nell'organismo"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 18,
+    "q": "Un farmaco è definito agonista quando:",
+    "options": [
+      "legandosi ad un rece(ore impedisce l'a(acco di un'altra sostanza",
+      "legandosi ad un rece(ore non provoca risposta biologica",
+      "si lega alle proteine plasma;che",
+      "legandosi ad un rece(ore provoca risposta biologica",
+      "non si lega ad uno specifico rece(ore"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 19,
+    "q": "Quale delle seguen; sostanze può provocare dipendenza:",
+    "options": [
+      "isoniazide",
+      "etanolo",
+      "propranololo",
+      "digitale",
+      "fa(ore di crescita GH"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "q": "Quale tra i seguen; farmaci è a maggiore rischio di provocare danno epa;co?",
+    "options": [
+      "aspirina",
+      "etoricoxib",
+      "codeina",
+      "paracetamolo",
+      "levofloxacina"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 21,
+    "q": "Quando il farmaco entra in commercio:",
+    "options": [
+      "è di proprietà di una industria farmaceu;ca che ne de;ene il breve(o",
+      "il farmaco non è so(oposto a breve(o",
+      "il breve(o di un farmaco dura 25-30 anni",
+      "l'industria farmaceu;ca produ(rice non ne de;ene il breve(o",
+      "al termine del periodo coperto dal breve(o, il farmaco non può essere prodo(o anche da altre di(e"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 22,
+    "q": "I comita; e;ci:",
+    "options": [
+      "non valuta gli studi sui disposi;vi medici",
+      "non valutano gli studi osservazionali che coinvolgono soggeN umani",
+      "non esistono in italia",
+      "devono solo promuovere la ricerca scien;fica",
+      "devono promuovere la ricerca scien;fica e tutelare i soggeN che partecipano alle sperimentazioni"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 23,
+    "q": "Il parametro di farmacocine;ca che si u;lizza per calcolare la biodisponibilità di un farmaco è:",
+    "options": [
+      "clearance renale",
+      "emivita plasma;ca",
+      "area so(o la curva (AUC)",
+      "volume di distribuzione",
+      "costante di assorbimento"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "q": "Il farmaco Bioequivalente:",
+    "options": [
+      "deve avere la stessa forma farmaceu;ca ed essere u;lizzato per le stesse indicazioni del farmaco originale",
+      "non può essere venduto con un nome di fantasia o con il nome del principio aNvo seguito dal nome della di(a produ(rice",
+      "due medicinali si definiscono bioequivalen; se contengono lo stesso principio aNvo",
+      "nella confezione esterna non deve comparire la dicitura \"medicinale equivalente\""
+    ],
+    "correct": 0
+  },
+  {
+    "id": 25,
+    "q": "Per azione topica di un farmaco si intende:",
+    "options": [
+      "la comparsa di eﬀeN prevalentemente nel punto di somministrazione del farmaco",
+      "la comparsa di eﬀeN dovunque ecce(o dove il farmaco è applicato",
+      "la comparsa di eﬀeN a livello cutaneo",
+      "la comparsa di eﬀeN in qualunque punto dell'organismo, ove sia presente il rece(ore del farmaco",
+      "la comparsa di eﬀeN collaterali dopo la somministrazione del farmaco"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 26,
+    "q": "Somministrazione per via inalatoria:",
+    "options": [
+      "non è possibile che induca delle irritazioni a livello locale",
+      "non è ada(a per aneste;ci, espe(oran; e broncodilatatori",
+      "non necessita di apparecchiature par;colari per la somministrazione",
+      "perme(e di controllare il dosaggio del farmaco con estrema precisione",
+      "l'assorbimento è estremamente rapido e si evita il filtro epa;co"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 27,
+    "q": "Negli USA il numero di mor; per patologie cardiache tra i pra;can; Wrestling:",
+    "options": [
+      "Circa 50 volte superiori a quello del resto della popolazione",
+      "Di poco inferiore rispe(o a quello del resto della popolazione",
+      "Circa 7 volte superiore a quello del resto della popolazione",
+      "Pressoché iden;co al resto della popolazione",
+      "Circa il doppio di quello del resto della popolazione"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 28,
+    "q": "Quali tra le seguen; sostanze figura nel programma di monitoraggio 2017 della WADA?",
+    "options": [
+      "Cocaina",
+      "Codeina",
+      "Hashish",
+      "Diazepam",
+      "Insulina"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "q": "Una delle seguen; è una ;pica tossicità dei FANS",
+    "options": [
+      "Tossicità a livello del SNC",
+      "Tossicità ;roidea",
+      "Tossicità cardiovascolare",
+      "Tossicità SNA",
+      "Tossicità respiratoria"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 30,
+    "q": "La percentuale del dispendio calorico quo;diano determinata dalla termogenesi indo(a è pari al",
+    "options": [
+      "10%",
+      "2%",
+      "<1%",
+      "30%",
+      "25%"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 31,
+    "q": "In base ai da; del 2018 della Commissione Vigilanza Doping si ricava che (risposta esa(a)",
+    "options": [
+      "Il 50% degli atle; ricorre a farmaci o prodoN salu;s;ci",
+      "Quasi il 90% degli atle; ricorre a farmaci o prodoN salu;s;ci",
+      "Il 5% degli atle; ricorre a farmaci o prodoN salu;s;ci",
+      "Circa il 25% degli atle; ricorre a farmaci o prodoN salu;s;ci",
+      "Meno del 2% degli atle; ricorre a farmaci o prodoN salu;s;ci"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "q": "Quali tra le seguen; bevande può interagire con numerosi farmaci:",
+    "options": [
+      "Caﬀè",
+      "Succo di pompelmo",
+      "Ginseng",
+      "Aranciata",
+      "Limonata"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "q": "Si può avere collasso cardiocircolatorio quando le perdite di liquidi corporei è pari al",
+    "options": [
+      "10% del peso corporeo",
+      "5% del peso corporeo",
+      "3% del peso corporeo",
+      "15% del peso corporeo",
+      "7% del peso corporeo"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 34,
+    "q": "Indicare se le seguen; aﬀermazioni sono vere o false",
+    "options": [
+      "In base ai da; della le(eratura l'uso di FANS topici nella traumatologia spor;va non è di nessuna u;lità terapeu;ca",
+      "Il principale organo bersaglio della tossicità dei FANS è l'apparato renale"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "q": "Per \"Profarmaco\" si intende (risposta corre(a)",
+    "options": [
+      "Un farmaco che esplica la sua azione solo dopo essere stato metabolizzato",
+      "Il farmaco più rappresenta;vo o capos;pite di una classe farmacologica",
+      "Un farmaco aNvo che viene trasformato nell'organismo in metaboli; anch'essi aNvi",
+      "Un farmaco che viene u;lizzato per favorire l'azione di un altro farmaco",
+      "Un farmaco aNvo che viene trasformato nell'organismo in metaboli; inaNvi"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 36,
+    "q": "Il numero s;mato di atle; dell'ex Germania dell'EST (DDR) che hanno ricevuto sostanze dopan; nell'ambito di un piano governa;vo segreto è di circa",
+    "options": [
+      "5000",
+      "10000",
+      "50000",
+      "1000"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "q": "Quale tra i seguen; FANS è quello a maggiore rischio di provocare gravi reazioni gastrointes;nali",
+    "options": [
+      "Diclofenac",
+      "Ketorolac",
+      "Ibuprofene",
+      "Aspirina",
+      "Ketoprofene"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "q": "Quali delle seguen; categorie di farmaci è maggiormente coinvolta sulla base dei da; italiani della segnalazione come causa di reazioni avverse muscolo-scheletriche?",
+    "options": [
+      "Sta;ne",
+      "Paracilline",
+      "Fosfo",
+      "Tarani",
+      "Tetracicline"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 39,
+    "q": "Quali delle seguen; sostanze può provocare disidratazione se assunta in dosi elevate?",
+    "options": [
+      "Caﬀeina",
+      "Arnica",
+      "Paracetamolo",
+      "Levoforacina",
+      "Codeina"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 40,
+    "q": "Una delle seguen; è la definizione di Emivita di un farmaco:",
+    "options": [
+      "La metà del tempo necessario a raggiungere il picco ema;co",
+      "Il tempo necessario perché compaia l'eﬀe(o terapeu;co",
+      "Il periodo di u;lizzabilità di un medicinale prima della sua scadenza",
+      "Il tempo necessario per eliminare il farmaco dall'organismo",
+      "Il tempo necessario aﬃnché la concentrazione plasma;ca del farmaco si riduca della metà"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 41,
+    "q": "Uno dei più gravi eﬀeN determinan; da un'eccessiva inges;one di liquidi può essere",
+    "options": [
+      "L'acidosi metabolica",
+      "Iponatriemia",
+      "Iperkalemia",
+      "La diminuzione del pH cellulare",
+      "L'ulceremia"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "q": "Quale tra ques; è il meccanismo di azione dei FANS",
+    "options": [
+      "Blocco della produzione di leucotrieni",
+      "Antagonismi a livello dei rece(ori adrenergici",
+      "Blocco dell'enzima ciclossigenasi",
+      "Aumentata produzione di acido arachidonico",
+      "Aumento dell'aNvità della fosfocrea;na"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "q": "Quale delle seguen; è la percentuale di reazioni avverse muscolo-scheletriche da farmaci nella banca da; italiana della segnalazione",
+    "options": [
+      "30%",
+      "4%",
+      "15%",
+      "7%",
+      "22%"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "q": "Quale dei seguen; atle; italiani è stato squalificato perché posi;vo ai controlli an;doping alle olimpiadi di Pechino 2008",
+    "options": [
+      "Davide Rebellin",
+      "Filippo Magnini",
+      "Josefa Idem",
+      "Valen;na Vezzali",
+      "Roberto Cammarelle"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 45,
+    "q": "In situazioni normali la quan;tà d'acqua che l'organismo perde è di circa:",
+    "options": [
+      "500ml",
+      "2500ml",
+      "1000ml",
+      "5000ml",
+      "3500ml"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "q": "Cosa si intende per farmaco OTC (indicare la risposta esa(a):",
+    "options": [
+      "..",
+      "",
+      "",
+      "Un farmaco acquistabile in farmacia senza rice(a medica (Over the Counter);",
+      ".."
+    ],
+    "correct": 3
+  },
+  {
+    "id": 47,
+    "q": "Una di queste è la definizione esa(a di assorbimento di un farmaco (indicare la risp corre(a):",
+    "options": [
+      "L'introduzione del farmaco nell'organismo;",
+      "L'arrivo del farmaco nella sede d'azione;",
+      "Il passaggio del farmaco dalla sede d'applicazione al sangue;",
+      "La sua capacità di disgregazione nei liquidi organici;",
+      "L'a(raversamento della barriera ematoencefalica."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 48,
+    "q": "Una delle seguen; è la cara(eris;ca della via di somministrazione sub linguale:",
+    "options": [
+      "Perme(e un accurato controllo della dose;",
+      "Non può essere usata per farmaci distruN dall'acidità gastrica;",
+      "E' ada(a all'autosomministrazione;",
+      "L'assorbimento è lento e costante;",
+      "E' ada(a per farmaci gassosi."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 49,
+    "q": "Uno dei seguen; organi è sede principale di metabolizzazione dei farmaci:",
+    "options": [
+      "sistema nervoso centrale;",
+      "Milza;",
+      "Cervello;",
+      "Fegato;",
+      "Cuore."
+    ],
+    "correct": 3
+  },
+  {
+    "id": 50,
+    "q": "In una delle seguen; stru(ure cellulari sono localizza; gli enzimi epa;ci (Citocromi P450) responsabili delle reazioni di metabolizzazione dei farmaci di fase I, indicare quale.",
+    "options": [
+      "Ribosomi;",
+      "Complesso del Golgi;",
+      "Microtubuli;",
+      "Re;colo endoplasma;co liscio;",
+      "Lisosomi."
+    ],
+    "correct": 3
+  },
+  {
+    "id": 51,
+    "q": "Uno dei seguen; è l'organo di eliminazione principale dei farmaci.",
+    "options": [
+      "Fegato;",
+      "Cuore;",
+      "Polmoni;",
+      "Intes;no re(o;",
+      "Rene."
+    ],
+    "correct": 4
+  },
+  {
+    "id": 52,
+    "q": "Una delle seguen; è la definizione di tempo di latenza di un farmaco, indicare quale.",
+    "options": [
+      "il tempo necessario perché compaiano i primi eﬀeN;",
+      "il tempo che impiega il farmaco ad entrare nel circolo sanguigno",
+      "il periodo massimo di conservazione di un medicinale;",
+      "il tempo necessario perché il farmaco venga eliminato completamente",
+      "l'intervallo di tempo tra due somministrazioni"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 53,
+    "q": "La presenza di una patologia di ;po emorragico espone il paziente ad un maggior rischio di sanguinamento se assume uno dei seguen; farmaci.",
+    "options": [
+      "betametasone;",
+      "paracetamolo;",
+      "eritromicina;",
+      "aspirina;",
+      "diazepam."
+    ],
+    "correct": 3
+  },
+  {
+    "id": 54,
+    "q": "Una delle seguen; è ;pica reazione allergica da farmaci.",
+    "options": [
+      "Pericardite;",
+      "Rush cutaneo;",
+      "Ulcera pep;ca;",
+      "Alcalosi respiratoria;",
+      "Or;caria."
+    ],
+    "correct": 4
+  },
+  {
+    "id": 55,
+    "q": "una delle seguen; è la definizione corre(a del fenomeno della tolleranza.",
+    "options": [
+      "la mancanza di eﬀe(o terapeu;co da parte di un farmaco;",
+      "la comparsa di una reazione avversa da farmaci;",
+      "la necessità di aumentare la dose di una sostanza per aumentare l'eﬀe(o desiderato",
+      "la necessità di prolungare la terapia per o(enere la guarigione del paziente",
+      "l'incapacità di un rece(ore di legare un farmaco."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 56,
+    "q": "Quale delle seguen; classi di farmaci viene u;lizzato per eﬀeN psicos;molan;?",
+    "options": [
+      "farmaci per il controllo del peso",
+      "an;trombo;ci",
+      "steroidi androgeni",
+      "miorilassan;",
+      "an;anemici"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 57,
+    "q": "Con il termine oppiacei si indica:",
+    "options": [
+      "papavero da oppio",
+      "enchefaline",
+      "endorfine",
+      "marijuana",
+      "i deriva; dell'oppio"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 58,
+    "q": "Le prostaglandine sono sinte;zzate nel nostro organismo a par;re da uno dei seguen; substar;;",
+    "options": [
+      "acido linoleico",
+      "Tiroxina e Triptofano",
+      "Acido Bu;rrico e Fenico",
+      "Acido Arachidonico",
+      "Glucosio"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 59,
+    "q": "Quale dei seguen; compos; cocainici viene ritenuto quello con il maggiore potenziale di dipendenza",
+    "options": [
+      "cocaina cloridrato",
+      "foglie di coca",
+      "fiori di coca",
+      "c….",
+      "Crack"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 60,
+    "q": "Uno dei seguen; … nocivi non è presente nella lista delle sostanze dopan; della WADA",
+    "options": [
+      "cocaina",
+      "mariuana",
+      "…",
+      "….",
+      "caﬀeina"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 61,
+    "q": "Il tetraidrocanna… è presente in misura maggiore in uno dei seguen; prodoN naturali",
+    "options": [
+      "olio di hashish",
+      "marijuana",
+      "ganja",
+      "peyote",
+      "hashish"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 62,
+    "q": "Quali farmaci sono ada(a alla tosse secca",
+    "options": [
+      "mucoli;ci",
+      "seda;vi della tosse",
+      "espe(oran;",
+      "broncodilatatori",
+      "an;staminici"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "q": "Una delle seguen; sostanze non ha rece(ori in grado di modulare dire(amente la sintesi proteica",
+    "options": [
+      "cor;solo;",
+      "estrogeni, progesterone, androgeni",
+      "vitamina D e acido re;noico",
+      "adrenalina",
+      "ormoni ;roidei"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 64,
+    "q": "uno dei seguen; steroidi non è un ormone:",
+    "options": [
+      "testosterone",
+      "colesterolo",
+      "cor;solo",
+      "estradiolo",
+      "aldosterone"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "q": "In uno dei seguen; sport è vietato l'uso dei beta-bloccan;",
+    "options": [
+      ";ro con l'arco",
+      "atle;ca leggera",
+      "ciclismo",
+      "sci",
+      "calcio"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 66,
+    "q": "La principale sede di sintesi naturale del EPO è",
+    "options": [
+      "midollo",
+      "globuli rossi",
+      "ipofisi",
+      "surrene",
+      "rene"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 67,
+    "q": "Uno dei seguen; steroidi sono precursori metabolici del testosterone",
+    "options": [
+      "stanazolo",
+      "pregnenolone",
+      "diidrotestosterone",
+      "deidroplandrosterone (o deidropiandrosterone)",
+      "estradiolo"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 68,
+    "q": "Per eﬀe(o placebo si intende:",
+    "options": [
+      "Qualsiasi eﬀe(o terapeu;co non dovuto alle azioni farmacologiche che il farmaco possiede.",
+      "L'eﬀe(o terapeu;co principale che il farmaco è in grado di produrre.",
+      "Qualsiasi eﬀe(o che non sia dannoso per il paziente.",
+      "Qualsiasi eﬀe(o che non sia in grado di produrre un miglioramento terapeu;co."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 69,
+    "q": "Per assorbimento si intende:",
+    "options": [
+      "L'inges;one di un farmaco a stomaco vuoto",
+      "Il passaggio di un farmaco dal punto di somministrazione al circolo ema;co",
+      "Il passaggio di un farmaco dal sistema arterioso a quello venoso"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "q": "La farmacologia studia:",
+    "options": [
+      "Gli eﬀeN del farmaco",
+      "Il comportamento di un farmaco all'interno dell'organismo",
+      "I meccanismi d'azione di un farmaco"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "q": "Nell'antagonismo compe;;vo…",
+    "options": [
+      "Due farmaci A e B producono eﬀeN oppos; agendo sugli stessi rece(ori",
+      "Due farmaci A e B producono eﬀeN oppos; agendo su rece(ori diversi",
+      "Producono medesimi eﬀeN agendo sugli stessi rece(ori"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 72,
+    "q": "Un farmaco agonista deve avere…",
+    "options": [
+      "Sia aNvità intrinseca sia aﬃnità rece(oriale",
+      "Almeno aﬃnità rece(oriale",
+      "Suﬃciente aNvità intrinseca"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 73,
+    "q": "Le reazioni allergiche ai farmaci sono…",
+    "options": [
+      "Reazioni immunitarie di autodifesa",
+      "Reazioni dovute ad un'intossicazione acuta",
+      "Reazioni determinate dall'uso con;nuato e spropositato di farmaci",
+      "Reazioni indipenden; dalla dose somministrata"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 74,
+    "q": "Il range terapeu;co (o finestra terapeu;ca)…",
+    "options": [
+      "È l'intervallo di concentrazioni ema;che di un farmaco entro il quale si manifestano i suoi eﬀeN terapeu;ci senza eﬀeN tossici",
+      "Esprime la relazione che intercorre tra sicurezza ed eﬃcacia del farmaco",
+      "Se basso (vicino all'unità), esprime la sicurezza di un farmaco"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 75,
+    "q": "Nel paziente adulto con insuﬃcienza renale…",
+    "options": [
+      "La posologia va modificata sempre, indipendente dai valori di Clct",
+      "La posologia va modificata solo se i valori di Clct sono inferiori a 50 ml/min",
+      "La posologia va modificata solo in base all'età del paziente"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "q": "Le interazioni tra farmaci avvengono…",
+    "options": [
+      "Sempre e solo all'interno dell'organismo",
+      "Sempre e solo prima della somministrazione al momento della preparazione",
+      "Sia al momento della preparazione, sia dopo la somministrazione"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 77,
+    "q": "Gli an;bio;ci, se usa; corre(amente, sono farmaci…",
+    "options": [
+      "sintoma;ci",
+      "cura;vi",
+      "pallia;vi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "q": "La resistenza primaria a un an;bio;co…",
+    "options": [
+      "è determinata gene;camente",
+      "si presenta in un secondo momento, in seguito ad una mutazione genica",
+      "si riferisce alla naturale insensibilità di un ceppo ba(erico a un determinato an;bio;co",
+      "si presenta in farmaci con stru(ura chimica diversa"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 79,
+    "q": "La perdita di liquidi corporei pari al 5% del peso corporeo determina una diminuzione percentuale della performance massima di circa,indicare il valore più probabile",
+    "options": [
+      "30% d.70%",
+      "50% e.5%",
+      "10%"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 80,
+    "q": "Quale dei seguen; valori di emoglobina è considerato dalla Federazione Internazionale di Sci un valore soglia al di sopra del quale una donna non può partecipare ad una gara?",
+    "options": [
+      "10,5g/dL",
+      "8,5g/dL",
+      "20,5g/dL",
+      "34,5g/dL",
+      "16,5g/dL"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 81,
+    "q": "L'insulina (indica la risposta sbagliata)",
+    "options": [
+      "promuove processi anabolici e inibisce processi catabolici nel muscolo scheletrico",
+      "la sua secrezione è s;molata dall'esercizio fisico intenso",
+      "può promuovere ipoglicemia",
+      "l'allenamento causa aumento della sensibilità all'insulina",
+      "s;mola l'u;lizzo di glucosio da parte del muscolo scheletrico e del tessuto adiposo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "q": "l'ormone follicolos;molante (FSH) è prodo(o dall'adeinoipofisi:",
+    "options": [
+      "1V,2V",
+      "1V,2F",
+      "1F,2V",
+      "1F,2F"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 83,
+    "q": "La Pro-opiomelanocor;na (POMC)è",
+    "options": [
+      "un precursore dei neuropep;di oppiodi sinte;zzato e rilasciato nei terminali nervosi",
+      "un precursore proteico da cui la cellula produce ACTH,endorfine,encefaline",
+      "una proteina aNva sui rece(ori della morfina sinte;zzata e rilasciata nei terminali nervosi",
+      "un precursore dei neuro pep;di oppiodi aNvo anche sui rece(ori per il dolore",
+      "una proteina che inibisce i neuro pep;di oppiodi e quindi s;mola il dolore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "q": "Quale dei seguen; FANS viene ritenuto quello con il maggiore rischio di causare tossicità epa;ca?",
+    "options": [
+      "aspirina d.diclofenac",
+      "celecoxib e.nimesulide",
+      "ketoprofene"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "q": "Uno dei seguen; FANS è un inibitore seleNvo della ciclo-ossigenasi2(COX-2),indicare quale:",
+    "options": [
+      "Ibuprofene d.diclofenac",
+      "celecoxib e. piroxican",
+      "Ac.ace;lsalicilico"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "q": "L'anziano ha una massa corporea….",
+    "options": [
+      "1V,2V c.1F,2V",
+      "1V,2F d.1F,2F"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "q": "Una delle seguen; è la definizione corre(a di \"idiosincrasia\", indicare quale:",
+    "options": [
+      "condizione in cui il sogge(o è genericamente immunizzato contro tuN i farmaci",
+      "condizione, gene;camente determinata, in cui il sogge(o reagisce al farmaco in maniera assolutamente imprevedibile rispe(o alla media dei soggeN",
+      "l'allergia del sogge(o a quel determinato farmaco o ad una delle sue proteine",
+      "corrisponde al fenomeno della variabilità individuale di risposta ai farmaci",
+      "reazione avversa ai farmaci determinata dal sovradosaggio"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "q": "Secondo uno studio pubblicato sul Journal American Medical Associa;on negli USA nel 1994 le mor; provocate dalle reazione avverse da farmaci rappresentavano la (indicare la risposta esa(a):",
+    "options": [
+      "quarta causa di morte",
+      "o(ava causa di morte",
+      "prima causa di morte",
+      "quindicesima causa di morte",
+      "trentesima causa di morte"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 89,
+    "q": "Il naloxone è un antagonista funzionale della morfina",
+    "options": [
+      "1V,2V c.1F,2V",
+      "1V,2F d.1F,2F"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "q": "Una delle seguen; è la definizione corre(a per un antagonista funzionale,indicare quale:",
+    "options": [
+      "un farmaco che impedisce ad un agonista di legarsi al suo rece(ore",
+      "un farmaco che impedisce la trasmissione cellulare del messaggio derivante dall'interazione tra un agonista e il suo rece(ore",
+      "un farmaco che agendo su un rece(ore diverso da quello dell'agonista produce eﬀeN oppos; rispe(o a quest'ul;mo",
+      "un farmaco che si lega chimicamente ai gruppi funzionali di un agonista impedendogli di legarsi al rece(ore",
+      "un farmaco che legandosi ad un agonista ne favorisce l'eliminazione dall'organismo"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 91,
+    "q": "Indicare se le due seguen; aﬀermazioni sono vere o false",
+    "options": [
+      "Il rece(ore della morfina è un esempio di rece(ore accoppiato alla proteina G V",
+      "Gli an;staminici esplicano la loro azione legandosi all'istamina liberata dalle cellule basofili F"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 92,
+    "q": "Indicare se le seguen; aﬀermazioni sono vere o false",
+    "options": [
+      "In base ai da; del 2018 della commissione vigilanza doping l'assunzione di farmaci e prodoN salu;s;ci è percentualmente più frequente tra le donne rispe(o agli uomini V",
+      "In base ai da; del 2018 della commissione vigilanza doping gli atle; nega;vi ai controlli an;doping assumono percentualmente più farmaci/integratori/vitamine rispe(o agli atle; posi;vi"
+    ],
+    "correct": 0
+  }
 ];
 const elQuiz = document.getElementById('quiz');
 const elSummary = document.getElementById('summary');
